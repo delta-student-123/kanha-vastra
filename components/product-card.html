@@ -1,0 +1,24 @@
+<!-- Product Card Template -->
+<div class="product-card" data-id="${product.id}">
+  <div class="product-img-wrapper">
+    <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
+    ${product.discount ? `<span class="discount-badge">${product.discount}% OFF</span>` : ''}
+    <button class="wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="window.toggleWishlist('${product.id}')" title="Add to Wishlist">
+      ♥
+    </button>
+  </div>
+  <div class="product-body">
+    <div class="product-category">${product.categoryName}</div>
+    <a href="/pages/product-details.html?id=${product.id}" class="product-title">${product.name}</a>
+    <div class="product-rating">
+      ★ ${product.rating} <span>(${product.reviewsCount} reviews)</span>
+    </div>
+    <div class="product-price-row">
+      <span class="price-current">₹${product.price}</span>
+      ${product.originalPrice ? `<span class="price-original">₹${product.originalPrice}</span>` : ''}
+    </div>
+    <button class="btn-add-cart" onclick="window.addToCart('${product.id}')">
+      🛒 Add to Cart
+    </button>
+  </div>
+</div>

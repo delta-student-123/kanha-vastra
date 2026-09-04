@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Kanha Vastra - Divine Elegance for Your Kanha</title>
+  <meta name="description" content="Kanha Vastra brings beautifully crafted, traditional and elegant vastra designed especially for Laddu Gopal and Kanha Ji.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/checkout.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <div id="announcement-bar-container"></div>
+  <div id="site-header-container"></div>
+
+  <main>
+    <section class="container" style="padding: 40px 0 80px 0;">
+      <h1 class="section-title">Get in Touch with Us</h1>
+      <p class="section-subtitle">Have questions about Laddu Gopal poshak sizes, custom orders, or shipping?</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
+        <!-- Contact Info -->
+        <div style="background: #fff; padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
+          <h3 class="font-heading" style="color: var(--primary-main); margin-bottom: 20px;">Store & Customer Care</h3>
+          
+          <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+            <div style="font-size: 1.5rem; color: var(--gold-dark);">📍</div>
+            <div>
+              <strong>Main Vrindavan Store:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">108 Banke Bihari Temple Marg, Vrindavan, Mathura, UP - 281121</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+            <div style="font-size: 1.5rem; color: var(--gold-dark);">📞</div>
+            <div>
+              <strong>Customer Support & WhatsApp:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">+91 98765 43210 (Mon - Sat, 9 AM - 8 PM)</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px;">
+            <div style="font-size: 1.5rem; color: var(--gold-dark);">✉️</div>
+            <div>
+              <strong>Email Inquiries:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">support@krishnaclothingstore.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="checkout-form-box">
+          <form onsubmit="event.preventDefault(); window.showToast('Thank you! Our support team will call you back shortly.');">
+            <h3 class="font-heading" style="color: var(--primary-main); margin-bottom: 20px;">Send Us a Message</h3>
+
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" required placeholder="Radhika Sharma">
+            </div>
+
+            <div class="form-group">
+              <label>Email or Mobile Number *</label>
+              <input type="text" required placeholder="radhika@example.com / +91 98765...">
+            </div>
+
+            <div class="form-group">
+              <label>Subject / Query Category</label>
+              <select>
+                <option>Size & Fitting Guidance</option>
+                <option>Custom Order Request</option>
+                <option>Bulk Order / Festival Booking</option>
+                <option>Order Shipping Status</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Your Message *</label>
+              <textarea rows="4" required placeholder="Describe how we can help you with your Shringar order..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

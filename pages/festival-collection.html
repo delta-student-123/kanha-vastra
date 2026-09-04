@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festive Special Collection | Krishna Clothing Store</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <div id="announcement-bar-container"></div>
+  <div id="site-header-container"></div>
+
+  <main>
+    <!-- Festival Hero Header -->
+    <section style="background: linear-gradient(135deg, #6b0514 0%, #071927 100%); color: #fff; padding: 60px 0; text-align: center; border-bottom: 3px solid var(--gold-primary);">
+      <div class="container">
+        <span class="badge badge-gold" style="margin-bottom: 12px;">JANMASTHAMI & RADHASTHAMI SPECIAL</span>
+        <h1 class="font-heading" style="font-size: 3rem; margin-bottom: 12px; color: var(--gold-light);">Divine Mahotsav Collections</h1>
+        <p style="max-width: 650px; margin: 0 auto 20px auto; color: #e5e7eb; font-size: 1.05rem;">
+          Celebrate Krishna Janmashtami and Radhashtami with grand royal poshak sets, heavy Kundan crowns, and handmade wooden flutes. Use promo code <strong>JANMASTHAMI20</strong> for 20% OFF.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="padding: 40px 0 80px 0;">
+      <div class="products-grid" id="festival-grid"></div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/data/products.json').then(r => r.json()).then(products => {
+        window.KCS.products = products;
+        const festItems = products.filter(p => p.festival === 'janmashtami' || p.festival === 'radhashtami');
+        const grid = document.getElementById('festival-grid');
+        if (grid) {
+          grid.innerHTML = festItems.map(p => `
+            <div class="product-card" data-id="${p.id}">
+              <div class="product-img-wrapper">
+                <img src="${p.images[0]}" alt="${p.name}">
+                ${p.discount ? `<span class="discount-badge">${p.discount}% OFF</span>` : ''}
+              </div>
+              <div class="product-body">
+                <div class="product-category">${p.categoryName}</div>
+                <a href="/pages/product-details.html?id=${p.id}" class="product-title">${p.name}</a>
+                <div class="product-price-row">
+                  <span class="price-current">₹${p.price}</span>
+                  ${p.originalPrice ? `<span class="price-original">₹${p.originalPrice}</span>` : ''}
+                </div>
+                <button class="btn-add-cart" onclick="window.addToCart('${p.id}')">🛒 Add to Cart</button>
+              </div>
+            </div>
+          `).join('');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

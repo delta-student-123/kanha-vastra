@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Arrivals | Krishna Clothing Store</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <div id="announcement-bar-container"></div>
+  <div id="site-header-container"></div>
+
+  <main>
+    <section class="container" style="padding: 40px 0 80px 0;">
+      <h1 class="section-title">New Arrivals ✨</h1>
+      <p class="section-subtitle">Freshly crafted poshak dresses, crown jewels, and accessories launched this season.</p>
+
+      <div class="products-grid" id="new-arrivals-grid"></div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/data/products.json').then(r => r.json()).then(products => {
+        window.KCS.products = products;
+        const newItems = products.filter(p => p.isNew || p.id === 'KCS-102' || p.id === 'KCS-104' || p.id === 'KCS-107');
+        const grid = document.getElementById('new-arrivals-grid');
+        if (grid) {
+          grid.innerHTML = newItems.map(p => `
+            <div class="product-card" data-id="${p.id}">
+              <div class="product-img-wrapper">
+                <img src="${p.images[0]}" alt="${p.name}">
+                <span class="badge badge-gold" style="position: absolute; top: 12px; left: 12px;">NEW</span>
+              </div>
+              <div class="product-body">
+                <div class="product-category">${p.categoryName}</div>
+                <a href="/pages/product-details.html?id=${p.id}" class="product-title">${p.name}</a>
+                <div class="product-price-row">
+                  <span class="price-current">₹${p.price}</span>
+                </div>
+                <button class="btn-add-cart" onclick="window.addToCart('${p.id}')">🛒 Add to Cart</button>
+              </div>
+            </div>
+          `).join('');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

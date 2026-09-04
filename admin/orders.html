@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Orders | Admin Portal</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <style>
+    .admin-layout { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+    .admin-sidebar { background: var(--primary-dark); color: #fff; padding: 24px; border-right: 2px solid var(--gold-primary); }
+    .admin-sidebar a { display: flex; align-items: center; gap: 12px; padding: 12px; color: #9ca3af; border-radius: var(--radius-sm); margin-bottom: 4px; font-weight: 600; }
+    .admin-sidebar a:hover, .admin-sidebar a.active { background: var(--gold-gradient); color: var(--primary-dark); }
+    .admin-main { background: #f4f6f9; padding: 32px; }
+  </style>
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div style="margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <img src="/assets/images/logo.png" alt="Kanha Vastra Logo" style="height: 42px; width: 100%; background: #ffffff; padding: 4px 8px; border-radius: 6px; object-fit: contain;">
+      </div>
+      <nav>
+        <a href="/admin/index.html">📊 Dashboard</a>
+        <a href="/admin/products.html">📦 Products</a>
+        <a href="/admin/add-product.html">➕ Add Product</a>
+        <a href="/admin/orders.html" class="active">🛒 Orders</a>
+        <a href="/admin/customers.html">👥 Customers</a>
+        <a href="/admin/inventory.html">📉 Inventory Stock</a>
+        <a href="/admin/coupons.html">🏷️ Coupons</a>
+        <a href="/admin/reviews.html">⭐ Reviews</a>
+        <a href="/index.html" style="margin-top: 40px; color: var(--crimson-accent);">🌐 Back to Storefront</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <h1 class="font-heading" style="color: var(--primary-main); margin-bottom: 28px;">Customer Orders Fulfillment</h1>
+
+      <div style="background: #fff; border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="text-align: left; border-bottom: 2px solid var(--border-light); color: var(--primary-main);">
+              <th style="padding: 10px;">Order ID</th>
+              <th style="padding: 10px;">Date</th>
+              <th style="padding: 10px;">Customer</th>
+              <th style="padding: 10px;">Total</th>
+              <th style="padding: 10px;">Payment Method</th>
+              <th style="padding: 10px;">Status</th>
+            </tr>
+          </thead>
+          <tbody id="admin-orders-body">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const localOrders = JSON.parse(localStorage.getItem('kcs_orders')) || [];
+      let seedOrders = [];
+      try {
+        const r = await fetch('/data/orders.json');
+        seedOrders = await r.json();
+      } catch(e){}
+
+      const all = [...localOrders, ...seedOrders];
+      const body = document.getElementById('admin-orders-body');
+      body.innerHTML = all.map(o => `
+        <tr style="border-bottom: 1px solid var(--border-light);">
+          <td style="padding: 12px; font-weight: 700;">${o.orderId}</td>
+          <td style="padding: 12px; color: var(--text-muted);">${o.date}</td>
+          <td style="padding: 12px;">${o.customer ? o.customer.name : 'Devotee'}</td>
+          <td style="padding: 12px; font-weight: 700;">₹${o.total}</td>
+          <td style="padding: 12px;">${o.paymentMethod || 'UPI'}</td>
+          <td style="padding: 12px;"><span class="badge badge-gold">${o.orderStatus}</span></td>
+        </tr>
+      `).join('');
+    });
+  </script>
+</body>
+</html>

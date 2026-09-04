@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Collections | Krishna Clothing Store</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <div id="announcement-bar-container"></div>
+  <div id="site-header-container"></div>
+
+  <main>
+    <section class="container" style="padding: 40px 0 80px 0;">
+      <h1 class="section-title">Royal Collections</h1>
+      <p class="section-subtitle">Specially curated thematic editions for everyday Shringar and festive mahotsavs.</p>
+
+      <div class="category-grid" style="margin-bottom: 60px;">
+        <a href="/pages/shop.html?category=laddu-gopal" class="category-card" style="height: 320px;">
+          <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80">
+          <div class="category-overlay">
+            <span class="badge badge-gold" style="width: fit-content; margin-bottom: 8px;">ROYAL ZARDOZI</span>
+            <div class="category-title" style="font-size: 1.5rem;">Velvet & Zari Poshak Collection</div>
+            <p style="font-size: 0.85rem; color: #d1d5db;">Heavy Zardozi work with authentic peacock feather plume accents.</p>
+          </div>
+        </a>
+
+        <a href="/pages/festival-collection.html" class="category-card" style="height: 320px;">
+          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80">
+          <div class="category-overlay">
+            <span class="badge badge-crimson" style="width: fit-content; margin-bottom: 8px;">FESTIVE EDITION</span>
+            <div class="category-title" style="font-size: 1.5rem;">Janmashtami & Radhashtami Special</div>
+            <p style="font-size: 0.85rem; color: #d1d5db;">Matching Radha-Krishna pair poshak in lotus silk and gold Gotta Patti.</p>
+          </div>
+        </a>
+      </div>
+
+      <h3 class="section-title">Featured Products In Collection</h3>
+      <div class="products-grid" id="collections-grid"></div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/data/products.json').then(r => r.json()).then(products => {
+        window.KCS.products = products;
+        const grid = document.getElementById('collections-grid');
+        if (grid) {
+          grid.innerHTML = products.slice(0, 8).map(p => `
+            <div class="product-card" data-id="${p.id}">
+              <div class="product-img-wrapper">
+                <img src="${p.images[0]}" alt="${p.name}">
+                ${p.discount ? `<span class="discount-badge">${p.discount}% OFF</span>` : ''}
+              </div>
+              <div class="product-body">
+                <div class="product-category">${p.categoryName}</div>
+                <a href="/pages/product-details.html?id=${p.id}" class="product-title">${p.name}</a>
+                <div class="product-price-row">
+                  <span class="price-current">₹${p.price}</span>
+                </div>
+                <button class="btn-add-cart" onclick="window.addToCart('${p.id}')">🛒 Add to Cart</button>
+              </div>
+            </div>
+          `).join('');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

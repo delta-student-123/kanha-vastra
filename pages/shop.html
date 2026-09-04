@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Poshak & Accessories | Kanha Vastra - Divine Elegance for Your Kanha</title>
+  <meta name="description" content="Kanha Vastra brings beautifully crafted, traditional and elegant vastra designed especially for Laddu Gopal and Kanha Ji.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/products.css">
+</head>
+<body>
+  <div id="announcement-bar-container"></div>
+  <div id="site-header-container"></div>
+
+  <main>
+    <section class="container" style="padding: 40px 0 80px 0;">
+      <div style="display: grid; grid-template-columns: 240px 1fr; gap: 36px;">
+        
+        <!-- Left Filter Sidebar matching reference image -->
+        <aside style="background: #fff; padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); height: fit-content;">
+          <h3 style="font-size: 1rem; font-weight: 700; border-bottom: 2px solid var(--brand-pink); padding-bottom: 8px; margin-bottom: 16px;">Product Categories</h3>
+          
+          <ul style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: #555;">
+            <li style="display: flex; justify-content: space-between; cursor: pointer;" onclick="window.location.href='/pages/shop.html?category=all'">
+              <span>All Products</span>
+              <span style="color: #999;">16</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; cursor: pointer;" onclick="window.location.href='/pages/shop.html?category=accessories'">
+              <span>Accessories</span>
+              <span style="color: #999;">8</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; cursor: pointer;" onclick="window.location.href='/pages/shop.html?category=bansuri'">
+              <span>Bansuri</span>
+              <span style="color: #999;">3</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; cursor: pointer;" onclick="window.location.href='/pages/shop.html?category=mojdi'">
+              <span>Mojdi/Paduka</span>
+              <span style="color: #999;">2</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; cursor: pointer;" onclick="window.location.href='/pages/shop.html?category=mor-pankh-kalagi'">
+              <span>Mor Pankh Kalagi</span>
+              <span style="color: #999;">2</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; cursor: pointer;" onclick="window.location.href='/pages/shop.html?category=dresses'">
+              <span>Dresses / Poshak</span>
+              <span style="color: #999;">7</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; cursor: pointer;" onclick="window.location.href='/pages/shop.html?category=laddu-gopal'">
+              <span>Laddu Gopal</span>
+              <span style="color: #999;">6</span>
+            </li>
+            <li style="display: flex; justify-content: space-between; cursor: pointer;" onclick="window.location.href='/pages/shop.html?category=ornaments'">
+              <span>Ornaments / Jewellery</span>
+              <span style="color: #999;">4</span>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Right Main Catalogue -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border-light);">
+            <span id="shop-results-count" style="font-size: 0.9rem; color: #666;">Showing all products</span>
+            <div>
+              <select style="padding: 6px 12px; border: 1px solid var(--border-light); border-radius: 4px; font-size: 0.85rem;">
+                <option>Default sorting</option>
+                <option>Sort by popularity</option>
+                <option>Sort by price: low to high</option>
+                <option>Sort by price: high to low</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="products-grid" id="shop-products-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+            <!-- Rendered by products.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/products.js"></script>
+</body>
+</html>

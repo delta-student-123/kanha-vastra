@@ -1,0 +1,49 @@
+[
+  {
+    "orderId": "KCS-94821",
+    "customer": {
+      "name": "Priyanka Roy",
+      "email": "priyanka.roy@example.com",
+      "phone": "+91 98765 43210",
+      "address": "108 Vrindavan Enclave, Sector 15",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "pincode": "201301"
+    },
+    "date": "2026-08-30",
+    "items": [
+      {
+        "id": "KCS-101",
+        "name": "Royal Zardozi Velvet Poshak for Laddu Gopal",
+        "size": "Size 3",
+        "color": "Royal Blue",
+        "price": 1499,
+        "quantity": 1,
+        "total": 1499
+      },
+      {
+        "id": "KCS-105",
+        "name": "Handcrafted Carved Bamboo Flute (Bansuri)",
+        "size": "6 Inches",
+        "color": "Natural Wood & Gold",
+        "price": 499,
+        "quantity": 1,
+        "total": 499
+      }
+    ],
+    "subtotal": 1998,
+    "discount": 399,
+    "shipping": 0,
+    "total": 1599,
+    "paymentMethod": "UPI (Google Pay)",
+    "paymentStatus": "Paid",
+    "orderStatus": "Out for Delivery",
+    "trackingTimeline": [
+      { "status": "Order Placed", "time": "30 Aug, 10:15 AM", "completed": true },
+      { "status": "Packed & Quality Checked", "time": "30 Aug, 04:30 PM", "completed": true },
+      { "status": "Shipped via BlueDart", "time": "31 Aug, 09:00 AM", "completed": true },
+      { "status": "Out for Delivery", "time": "04 Sep, 08:30 AM", "completed": true },
+      { "status": "Delivered", "time": "Expected Today by 6 PM", "completed": false }
+    ]
+  }
+]

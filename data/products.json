@@ -1,0 +1,468 @@
+[
+  {
+    "id": "KV-301",
+    "name": "Fancy Pink & Cyan Floral Poshak",
+    "category": "laddu-gopal",
+    "categoryName": "Laddu Gopal Dresses",
+    "price": 269,
+    "originalPrice": 499,
+    "discount": 46,
+    "rating": 4.9,
+    "reviewsCount": 64,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Pink", "Cyan"],
+    "inStock": true,
+    "stockQty": 50,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "BESTSELLER",
+    "description": "Exquisite pink and cyan net poshak adorned with heavy crystal stone work, floral accents and matching Pagdi for Laddu Gopal Ji.",
+    "features": [
+      "Heavy crystal stone work and floral embroidery",
+      "Soft cotton lining for gentle touch",
+      "Includes matching Pagdi crown",
+      "Sizes 0 to 5 available"
+    ],
+    "images": [
+      "/assets/images/bestseller_pink_cyan.png",
+      "/assets/images/cat_poshak.jpg",
+      "/assets/images/cat_green_poshak.jpg"
+    ]
+  },
+  {
+    "id": "KV-302",
+    "name": "Sky Blue & Gold Zari Poshak",
+    "category": "poshak",
+    "categoryName": "Poshak",
+    "price": 424,
+    "originalPrice": 799,
+    "discount": 47,
+    "rating": 4.8,
+    "reviewsCount": 24,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Sky Blue", "Gold"],
+    "inStock": true,
+    "stockQty": 35,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "SALE",
+    "description": "Royal sky blue silk poshak featuring golden zari embroidery, peacock motif applique and gotta lace edging.",
+    "features": [
+      "Pure gold thread zari embroidery",
+      "Soft breathable silk base",
+      "Includes Pagdi & Patka",
+      "Handcrafted by Vrindavan karigars"
+    ],
+    "images": [
+      "/assets/images/bestseller_skyblue_gold.png",
+      "/assets/images/cat_green_poshak.jpg",
+      "/assets/images/bestseller_pink_cyan.png"
+    ]
+  },
+  {
+    "id": "KV-303",
+    "name": "Magenta Peacock Poshak With Pagdi",
+    "category": "laddu-gopal",
+    "categoryName": "Laddu Gopal Dresses",
+    "price": 389,
+    "originalPrice": 649,
+    "discount": 40,
+    "rating": 4.9,
+    "reviewsCount": 82,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Magenta Pink", "Gold"],
+    "inStock": true,
+    "stockQty": 40,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "POPULAR",
+    "description": "Vibrant magenta pink silk poshak featuring real peacock feather motifs and matching heavy Pagdi crown.",
+    "features": [
+      "Heavy peacock plume embroidery",
+      "Matching embellished turban crown included",
+      "Easy velcro back attachment"
+    ],
+    "images": [
+      "/assets/images/bestseller_magenta_peacock.png",
+      "/assets/images/cat_poshak.jpg",
+      "/assets/images/cat_red_yellow_poshak.jpg"
+    ]
+  },
+  {
+    "id": "KV-304",
+    "name": "Red & White Floral Organza Poshak",
+    "category": "krishna-dresses",
+    "categoryName": "Krishna Dresses",
+    "price": 324,
+    "originalPrice": 599,
+    "discount": 45,
+    "rating": 4.7,
+    "reviewsCount": 45,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Red", "White"],
+    "inStock": true,
+    "stockQty": 45,
+    "isFeatured": true,
+    "isBestSeller": false,
+    "badge": "NEW",
+    "description": "Designer red and white organza frill poshak with floral Kundan embellishments for Thakur Ji.",
+    "features": [
+      "100% Breathable soft organza fabric",
+      "Handmade floral Kundan appliques",
+      "Washable and colorfast"
+    ],
+    "images": [
+      "/assets/images/bestseller_red_white.png",
+      "/assets/images/cat_red_yellow_poshak.jpg",
+      "/assets/images/janmashtami_showcase.jpg"
+    ]
+  },
+  {
+    "id": "KV-305",
+    "name": "Royal Gold Mukut & Crown Set",
+    "category": "pagdi",
+    "categoryName": "Pagdi & Mukut",
+    "price": 549,
+    "originalPrice": 899,
+    "discount": 38,
+    "rating": 5.0,
+    "reviewsCount": 98,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Gold"],
+    "inStock": true,
+    "stockQty": 30,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "BESTSELLER",
+    "description": "Royal Kundan gold Mukut crown adorned with peacock motif and pearl drops for Kanha Ji.",
+    "features": [
+      "Pure brass and Kundan stone work",
+      "Gold thread peacock motif",
+      "Pearl string border detail"
+    ],
+    "images": [
+      "/assets/images/cat_mukut.jpg",
+      "/assets/images/prod_velvet_mukut.jpg",
+      "/assets/images/cat_jewellery.jpg"
+    ]
+  },
+  {
+    "id": "KV-306",
+    "name": "Carved Golden Brass Jhula Swing",
+    "category": "jhula",
+    "categoryName": "Jhula & Singhasan",
+    "price": 899,
+    "originalPrice": 1499,
+    "discount": 40,
+    "rating": 4.9,
+    "reviewsCount": 73,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Gold & Crimson Velvet"],
+    "inStock": true,
+    "stockQty": 42,
+    "isFeatured": true,
+    "isBestSeller": false,
+    "badge": "POPULAR",
+    "description": "Hand-carved golden brass peacock swing throne with royal crimson velvet seating cushion.",
+    "features": [
+      "Hand-carved brass peacock arch",
+      "Crimson velvet cushion seat",
+      "Sturdy gold hanging chains"
+    ],
+    "images": [
+      "/assets/images/cat_jhula.jpg",
+      "/assets/images/prod_mojdi_paduka.jpg",
+      "/assets/images/cat_mukut.jpg"
+    ]
+  },
+  {
+    "id": "KV-307",
+    "name": "Golden Bansuri & Morpankh Set",
+    "category": "bansuri",
+    "categoryName": "Bansuri",
+    "price": 299,
+    "originalPrice": 499,
+    "discount": 40,
+    "rating": 4.9,
+    "reviewsCount": 110,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Gold & Emerald"],
+    "inStock": true,
+    "stockQty": 25,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "ROYAL",
+    "description": "Carved brass flute with natural peacock feather and miniature brass paduka for Thakur Ji.",
+    "features": [
+      "Carved brass bansuri",
+      "Real peacock plume accent",
+      "Miniature brass paduka included"
+    ],
+    "images": [
+      "/assets/images/cat_flute.jpg",
+      "/assets/images/prod_silver_flute.jpg",
+      "/assets/images/cat_jewellery.jpg"
+    ]
+  },
+  {
+    "id": "KV-308",
+    "name": "Handcrafted Kundan Jewellery Set",
+    "category": "jewellery",
+    "categoryName": "Jewellery",
+    "price": 424,
+    "originalPrice": 799,
+    "discount": 47,
+    "rating": 4.8,
+    "reviewsCount": 54,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Gold & Pearl"],
+    "inStock": true,
+    "stockQty": 38,
+    "isFeatured": true,
+    "isBestSeller": false,
+    "badge": "SALE",
+    "description": "Gold Kundan haar necklace, multi-strand pearl mala, bangles, and tilak ornament set.",
+    "features": [
+      "Gold Kundan necklace haar",
+      "Multi-strand pearl mala",
+      "Bangles & tilak ornament"
+    ],
+    "images": [
+      "/assets/images/cat_jewellery.jpg",
+      "/assets/images/prod_pearl_emerald_ornament.jpg",
+      "/assets/images/cat_flute.jpg"
+    ]
+  },
+  {
+    "id": "KV-309",
+    "name": "Carved Golden Mojdi & Paduka Pair",
+    "category": "mojdi",
+    "categoryName": "Mojdi/Paduka",
+    "price": 349,
+    "originalPrice": 599,
+    "discount": 41,
+    "rating": 4.9,
+    "reviewsCount": 37,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Gold"],
+    "inStock": true,
+    "stockQty": 20,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "NEW",
+    "description": "Artisanal gold-finished carved brass mojdi slippers and wooden-style paduka footwear for Bal Gopal.",
+    "features": [
+      "Intricate floral brass carving",
+      "Gentle edges for idol feet",
+      "Dual pair gift pack"
+    ],
+    "images": [
+      "/assets/images/prod_mojdi_paduka.jpg",
+      "/assets/images/cat_accessories.jpg",
+      "/assets/images/cat_flute.jpg"
+    ]
+  },
+  {
+    "id": "KV-310",
+    "name": "Royal Peacock Mor Pankh Kalagi",
+    "category": "mor-pankh-kalagi",
+    "categoryName": "Mor Pankh Kalagi",
+    "price": 199,
+    "originalPrice": 349,
+    "discount": 43,
+    "rating": 5.0,
+    "reviewsCount": 42,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Peacock Green & Gold"],
+    "inStock": true,
+    "stockQty": 60,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "POPULAR",
+    "description": "Handcrafted real peacock feather brooch with gold Kundan work and ruby drop accents for Mukut decoration.",
+    "features": [
+      "100% natural vibrant peacock plume",
+      "Kundan stone studded centerpiece",
+      "Secure clip attachment for Pagdi"
+    ],
+    "images": [
+      "/assets/images/prod_mor_pankh_kalagi.jpg",
+      "/assets/images/cat_mukut.jpg",
+      "/assets/images/morpankh_banner_showcase.jpg"
+    ]
+  },
+  {
+    "id": "KV-311",
+    "name": "Royal Emerald & Pearl Mala Set",
+    "category": "ornaments",
+    "categoryName": "Ornaments",
+    "price": 379,
+    "originalPrice": 649,
+    "discount": 41,
+    "rating": 4.8,
+    "reviewsCount": 29,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Emerald Green & Gold"],
+    "inStock": true,
+    "stockQty": 30,
+    "isFeatured": false,
+    "isBestSeller": true,
+    "badge": "EXCLUSIVE",
+    "description": "Heavy emerald green Kundan necklace set with double-layer pearl string and matching bajuband.",
+    "features": [
+      "Royal green gemstone Kundan setting",
+      "Freshwater pearl strands",
+      "Complete shringar set"
+    ],
+    "images": [
+      "/assets/images/prod_pearl_emerald_ornament.jpg",
+      "/assets/images/cat_jewellery.jpg",
+      "/assets/images/cat_mala.jpg"
+    ]
+  },
+  {
+    "id": "KV-312",
+    "name": "Maroon Velvet Royal Mukut Turban",
+    "category": "pagdi",
+    "categoryName": "Pagdi & Mukut",
+    "price": 499,
+    "originalPrice": 849,
+    "discount": 41,
+    "rating": 4.9,
+    "reviewsCount": 51,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Deep Maroon & Gold"],
+    "inStock": true,
+    "stockQty": 25,
+    "isFeatured": true,
+    "isBestSeller": false,
+    "badge": "ROYAL",
+    "description": "Rich deep maroon velvet turban crown featuring handcrafted gold zardozi embroidery and peacock feather.",
+    "features": [
+      "Premium maroon velvet texture",
+      "Intricate hand zardozi embroidery",
+      "Fits securely on Bal Gopal"
+    ],
+    "images": [
+      "/assets/images/prod_velvet_mukut.jpg",
+      "/assets/images/cat_mukut.jpg",
+      "/assets/images/bestseller_magenta_peacock.png"
+    ]
+  },
+  {
+    "id": "KV-313",
+    "name": "Engraved Solid Silver Bansuri",
+    "category": "bansuri",
+    "categoryName": "Bansuri",
+    "price": 449,
+    "originalPrice": 799,
+    "discount": 44,
+    "rating": 5.0,
+    "reviewsCount": 67,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Silver & Crimson"],
+    "inStock": true,
+    "stockQty": 18,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "PREMIUM",
+    "description": "Finely engraved pure silver-finish miniature flute with crimson silk tassels and pearl chain embellishment.",
+    "features": [
+      "Pure silver electroplated finish",
+      "Crimson silk tassels",
+      "Includes protective velvet box"
+    ],
+    "images": [
+      "/assets/images/prod_silver_flute.jpg",
+      "/assets/images/cat_flute.jpg",
+      "/assets/images/cat_accessories.jpg"
+    ]
+  },
+  {
+    "id": "KV-314",
+    "name": "Emerald Green Peacock Net Poshak",
+    "category": "poshak",
+    "categoryName": "Poshak",
+    "price": 319,
+    "originalPrice": 599,
+    "discount": 46,
+    "rating": 4.7,
+    "reviewsCount": 38,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Emerald Green", "Gold"],
+    "inStock": true,
+    "stockQty": 40,
+    "isFeatured": false,
+    "isBestSeller": false,
+    "badge": "POPULAR",
+    "description": "Vibrant emerald green net poshak with heavy gold borders and matching Patka for daily and festive shringar.",
+    "features": [
+      "Gotta Patti embroidery border",
+      "Soft non-scratchy inner lining",
+      "Includes matching Patka"
+    ],
+    "images": [
+      "/assets/images/cat_green_poshak.jpg",
+      "/assets/images/bestseller_skyblue_gold.png",
+      "/assets/images/cat_poshak.jpg"
+    ]
+  },
+  {
+    "id": "KV-315",
+    "name": "Red & Yellow Traditional Festive Poshak",
+    "category": "festival",
+    "categoryName": "Festival Special",
+    "price": 359,
+    "originalPrice": 649,
+    "discount": 44,
+    "rating": 4.9,
+    "reviewsCount": 76,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Red", "Yellow"],
+    "inStock": true,
+    "stockQty": 55,
+    "isFeatured": true,
+    "isBestSeller": true,
+    "badge": "FESTIVAL",
+    "description": "Bright red and auspicious yellow silk poshak designed for Janmashtami and festive celebrations.",
+    "features": [
+      "Traditional dual color contrast",
+      "Heavy mirror work and lace border",
+      "Perfect for festival occasions"
+    ],
+    "images": [
+      "/assets/images/cat_red_yellow_poshak.jpg",
+      "/assets/images/janmashtami_showcase.jpg",
+      "/assets/images/bestseller_red_white.png"
+    ]
+  },
+  {
+    "id": "KV-316",
+    "name": "Divine Pearl Shringar Accessories Set",
+    "category": "accessories",
+    "categoryName": "Accessories",
+    "price": 279,
+    "originalPrice": 499,
+    "discount": 44,
+    "rating": 4.8,
+    "reviewsCount": 49,
+    "sizes": ["0", "1", "2", "3", "4", "5"],
+    "colors": ["Pearl & Gold"],
+    "inStock": true,
+    "stockQty": 30,
+    "isFeatured": true,
+    "isBestSeller": false,
+    "badge": "BEST VALUE",
+    "description": "Complete shringar set including bansuri, paduka, peacock feather, and pearl necklace in one box.",
+    "features": [
+      "Complete 4-in-1 shringar set",
+      "High quality Kundan finish",
+      "Ideal gift for Laddu Gopal devotees"
+    ],
+    "images": [
+      "/assets/images/cat_accessories.jpg",
+      "/assets/images/prod_pearl_emerald_ornament.jpg",
+      "/assets/images/prod_mojdi_paduka.jpg"
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | Krishna Clothing Store</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/cart.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <div id="announcement-bar-container"></div>
+  <div id="site-header-container"></div>
+
+  <main>
+    <section class="container" style="padding: 40px 0 80px 0;">
+      <h1 class="section-title">My Profile & Account</h1>
+
+      <div style="max-width: 600px; margin: 0 auto; background: #fff; border-radius: var(--radius-lg); border: 1px solid var(--border-gold); padding: 32px; box-shadow: var(--shadow-md);" id="profile-card">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = window.KCS.user || { name: 'Devotee Customer', email: 'radhika@example.com', phone: '+91 98765 43210' };
+      const card = document.getElementById('profile-card');
+      card.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 20px; border-bottom: 1px solid var(--border-light); padding-bottom: 20px; margin-bottom: 20px;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--gold-gradient); display: flex; align-items: center; justify-content: center; font-size: 2rem;">👤</div>
+          <div>
+            <h2 class="font-heading" style="color: var(--primary-main);">${user.name}</h2>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">${user.email}</div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <a href="/pages/account/orders.html" class="btn btn-outline" style="justify-content: space-between;">
+            <span>📦 My Order History</span>
+            <span>➔</span>
+          </a>
+          <a href="/pages/wishlist.html" class="btn btn-outline" style="justify-content: space-between;">
+            <span>🤍 Saved Wishlist</span>
+            <span>➔</span>
+          </a>
+          <button onclick="window.handleLogout()" class="btn btn-primary" style="background: var(--crimson-accent); border: none; margin-top: 12px;">
+            Sign Out
+          </button>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

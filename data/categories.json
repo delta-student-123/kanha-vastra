@@ -1,0 +1,72 @@
+[
+  {
+    "id": "krishna-dresses",
+    "name": "Krishna Dresses",
+    "slug": "krishna-dresses",
+    "itemCount": 48,
+    "image": "/assets/images/cat_green_poshak.jpg"
+  },
+  {
+    "id": "laddu-gopal",
+    "name": "Laddu Gopal Dresses",
+    "slug": "laddu-gopal",
+    "itemCount": 56,
+    "image": "/assets/images/hero_showcase.jpg"
+  },
+  {
+    "id": "poshak",
+    "name": "Poshak",
+    "slug": "poshak",
+    "itemCount": 64,
+    "image": "/assets/images/cat_poshak.jpg"
+  },
+  {
+    "id": "dhoti",
+    "name": "Dhoti",
+    "slug": "dhoti",
+    "itemCount": 24,
+    "image": "/assets/images/cat_dhoti.jpg"
+  },
+  {
+    "id": "mukut",
+    "name": "Mukut",
+    "slug": "mukut",
+    "itemCount": 40,
+    "image": "/assets/images/cat_mukut.jpg"
+  },
+  {
+    "id": "jewellery",
+    "name": "Jewellery",
+    "slug": "jewellery",
+    "itemCount": 62,
+    "image": "/assets/images/cat_jewellery.jpg"
+  },
+  {
+    "id": "mala",
+    "name": "Mala",
+    "slug": "mala",
+    "itemCount": 28,
+    "image": "/assets/images/cat_mala.jpg"
+  },
+  {
+    "id": "flute",
+    "name": "Flute",
+    "slug": "flute",
+    "itemCount": 20,
+    "image": "/assets/images/cat_flute.jpg"
+  },
+  {
+    "id": "accessories",
+    "name": "Accessories",
+    "slug": "accessories",
+    "itemCount": 35,
+    "image": "/assets/images/cat_accessories.jpg"
+  },
+  {
+    "id": "festival",
+    "name": "Festival Collection",
+    "slug": "festival",
+    "itemCount": 45,
+    "image": "/assets/images/cat_red_yellow_poshak.jpg"
+  }
+]

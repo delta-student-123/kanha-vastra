@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History | Krishna Clothing Store</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/cart.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <div id="announcement-bar-container"></div>
+  <div id="site-header-container"></div>
+
+  <main>
+    <section class="container" style="padding: 40px 0 80px 0;">
+      <h1 class="section-title">My Order History</h1>
+      <p class="section-subtitle">View past orders, receipts, and live tracking timelines.</p>
+
+      <div class="cart-table-wrapper" id="orders-history-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const container = document.getElementById('orders-history-list');
+      const localOrders = JSON.parse(localStorage.getItem('kcs_orders')) || [];
+      
+      let seedOrders = [];
+      try {
+        const res = await fetch('/data/orders.json');
+        seedOrders = await res.json();
+      } catch (err) {}
+
+      const allOrders = [...localOrders, ...seedOrders];
+
+      if (allOrders.length === 0) {
+        container.innerHTML = `<p style="text-align: center; padding: 40px;">No orders found yet.</p>`;
+        return;
+      }
+
+      container.innerHTML = `
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Date</th>
+              <th>Total Amount</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${allOrders.map(o => `
+              <tr>
+                <td><strong style="color: var(--primary-main);">${o.orderId}</strong></td>
+                <td style="color: var(--text-muted);">${o.date}</td>
+                <td style="font-weight: 800; color: var(--gold-dark);">₹${o.total}</td>
+                <td><span class="badge badge-gold">${o.orderStatus}</span></td>
+                <td>
+                  <a href="/pages/order-tracking.html?orderId=${o.orderId}" class="btn btn-primary btn-sm">Track Order</a>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+    });
+  </script>
+</body>
+</html>

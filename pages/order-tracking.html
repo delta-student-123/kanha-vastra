@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order | Krishna Vastra</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <div id="announcement-bar-container"></div>
+  <div id="site-header-container"></div>
+
+  <main>
+    <section class="container" style="padding: 60px 0 80px 0;">
+      <h1 style="font-family: var(--font-ui); font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 8px;">Track Your Order</h1>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 36px;">Enter your Order ID (e.g., KV-94821) to view real-time shipment status.</p>
+
+      <!-- Order ID Input Form -->
+      <div style="max-width: 540px; margin: 0 auto 40px auto; background: #fff; border: 1px solid var(--border-light); padding: 24px; border-radius: 4px; box-shadow: var(--shadow-sm);">
+        <form onsubmit="window.handleTrackSubmit(event)" style="display: flex; gap: 12px;">
+          <input type="text" id="track-order-id-input" placeholder="Enter Order ID" required style="flex: 1; padding: 12px 16px; border: 1px solid var(--border-light); border-radius: 4px; font-size: 0.95rem;">
+          <button type="submit" class="btn btn-magenta">[ TRACK ORDER ]</button>
+        </form>
+      </div>
+
+      <!-- Tracking Results Box -->
+      <div id="tracking-result-box" style="max-width: 800px; margin: 0 auto;">
+        <!-- Rendered dynamically by order-tracking.js -->
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/order-tracking.js"></script>
+</body>
+</html>

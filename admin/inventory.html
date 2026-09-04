@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory Stock | Admin Portal</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .admin-layout { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+    .admin-sidebar { background: var(--primary-dark); color: #fff; padding: 24px; border-right: 2px solid var(--gold-primary); }
+    .admin-sidebar a { display: flex; align-items: center; gap: 12px; padding: 12px; color: #9ca3af; border-radius: var(--radius-sm); margin-bottom: 4px; font-weight: 600; }
+    .admin-sidebar a:hover, .admin-sidebar a.active { background: var(--gold-gradient); color: var(--primary-dark); }
+    .admin-main { background: #f4f6f9; padding: 32px; }
+  </style>
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div style="margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <img src="/assets/images/logo.png" alt="Kanha Vastra Logo" style="height: 42px; width: 100%; background: #ffffff; padding: 4px 8px; border-radius: 6px; object-fit: contain;">
+      </div>
+      <nav>
+        <a href="/admin/index.html">📊 Dashboard</a>
+        <a href="/admin/products.html">📦 Products</a>
+        <a href="/admin/add-product.html">➕ Add Product</a>
+        <a href="/admin/orders.html">🛒 Orders</a>
+        <a href="/admin/customers.html">👥 Customers</a>
+        <a href="/admin/inventory.html" class="active">📉 Inventory Stock</a>
+        <a href="/admin/coupons.html">🏷️ Coupons</a>
+        <a href="/admin/reviews.html">⭐ Reviews</a>
+      </nav>
+    </aside>
+    <main class="admin-main">
+      <h1 class="font-heading" style="color: var(--primary-main); margin-bottom: 24px;">Inventory Stock Monitor</h1>
+      <div style="background: #fff; padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--border-light); text-align: left; color: var(--primary-main);">
+              <th style="padding: 10px;">Item SKU</th>
+              <th style="padding: 10px;">Product Name</th>
+              <th style="padding: 10px;">Category</th>
+              <th style="padding: 10px;">Stock Left</th>
+              <th style="padding: 10px;">Status Alert</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 12px; font-weight: 700;">KCS-107</td>
+              <td style="padding: 12px;">Radhashtami Special Lotus Silk Poshak</td>
+              <td style="padding: 12px;">Laddu Gopal Dresses</td>
+              <td style="padding: 12px; font-weight: 700; color: var(--crimson-accent);">18 units</td>
+              <td style="padding: 12px;"><span class="badge badge-crimson">Low Stock Alert</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 12px; font-weight: 700;">KCS-103</td>
+              <td style="padding: 12px;">Pure Silk Dhoti Kurta Set</td>
+              <td style="padding: 12px;">Krishna Ethnic Wear</td>
+              <td style="padding: 12px; font-weight: 700; color: var(--crimson-accent);">20 units</td>
+              <td style="padding: 12px;"><span class="badge badge-crimson">Low Stock Alert</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; font-weight: 700;">KCS-105</td>
+              <td style="padding: 12px;">Handcrafted Bamboo Flute</td>
+              <td style="padding: 12px;">Accessories</td>
+              <td style="padding: 12px; font-weight: 700; color: var(--emerald-green);">75 units</td>
+              <td style="padding: 12px;"><span class="badge badge-green">Optimal</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<header class="site-header" style="width: 100%; position: sticky; top: 0; z-index: 8000; box-shadow: 0 4px 16px rgba(0,0,0,0.08); background: #ffffff;">
+  <!-- Tier 1: Main White Header -->
+  <div style="background: #ffffff; border-bottom: 1px solid #eaeaea;">
+    <div class="container">
+      <div class="header-inner" style="display: flex; align-items: center; justify-content: space-between; height: 75px; gap: 16px;">
+        
+        <!-- Left Side: Brand Logo -->
+        <a href="/index.html" class="logo-brand" style="display: flex; align-items: center; text-decoration: none;">
+          <img src="/assets/images/logo.png" alt="Kanha Vastra - Divine Elegance for Your Kanha" style="height: 46px; max-width: 180px; object-fit: contain;">
+        </a>
+
+        <!-- Middle: Menu Dropdown Button & Search Bar -->
+        <div style="flex: 1; max-width: 540px; display: flex; align-items: center; gap: 10px; position: relative;">
+          
+          <!-- All Categories Menu Dropdown -->
+          <div class="header-menu-dropdown-wrapper" style="position: relative;">
+            <button id="all-categories-menu-btn" style="background: #7a001e; color: #ffffff; border: none; padding: 10px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; box-shadow: 0 2px 8px rgba(122,0,30,0.2);">
+              <span>☰ ALL CATEGORIES</span>
+              <span style="font-size: 0.7rem; color: #c59b27;">▾</span>
+            </button>
+            <div id="all-categories-dropdown-menu" style="display: none; position: absolute; top: 110%; left: 0; width: 230px; background: #ffffff; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1.5px solid #c59b27; z-index: 9999; padding: 8px 0;">
+              <a href="/pages/shop.html?category=poshak" style="display: flex; align-items: center; gap: 10px; padding: 10px 18px; color: #333; text-decoration: none; font-size: 0.84rem; font-weight: 600; border-bottom: 1px solid #f5f5f5;" onmouseover="this.style.background='#fdf8f3';this.style.color='#7a001e'" onmouseout="this.style.background='none';this.style.color='#333'">
+                <span>👗</span> Poshak & Dresses
+              </a>
+              <a href="/pages/shop.html?category=pagdi" style="display: flex; align-items: center; gap: 10px; padding: 10px 18px; color: #333; text-decoration: none; font-size: 0.84rem; font-weight: 600; border-bottom: 1px solid #f5f5f5;" onmouseover="this.style.background='#fdf8f3';this.style.color='#7a001e'" onmouseout="this.style.background='none';this.style.color='#333'">
+                <span>👑</span> Pagdi & Mukut
+              </a>
+              <a href="/pages/shop.html?category=jewellery" style="display: flex; align-items: center; gap: 10px; padding: 10px 18px; color: #333; text-decoration: none; font-size: 0.84rem; font-weight: 600; border-bottom: 1px solid #f5f5f5;" onmouseover="this.style.background='#fdf8f3';this.style.color='#7a001e'" onmouseout="this.style.background='none';this.style.color='#333'">
+                <span>💎</span> Jewellery & Haar
+              </a>
+              <a href="/pages/shop.html?category=accessories" style="display: flex; align-items: center; gap: 10px; padding: 10px 18px; color: #333; text-decoration: none; font-size: 0.84rem; font-weight: 600; border-bottom: 1px solid #f5f5f5;" onmouseover="this.style.background='#fdf8f3';this.style.color='#7a001e'" onmouseout="this.style.background='none';this.style.color='#333'">
+                <span>🪶</span> Accessories & Flute
+              </a>
+              <a href="/pages/shop.html?category=jhula" style="display: flex; align-items: center; gap: 10px; padding: 10px 18px; color: #333; text-decoration: none; font-size: 0.84rem; font-weight: 600; border-bottom: 1px solid #f5f5f5;" onmouseover="this.style.background='#fdf8f3';this.style.color='#7a001e'" onmouseout="this.style.background='none';this.style.color='#333'">
+                <span>🛕</span> Jhula & Singhasan
+              </a>
+              <a href="/pages/shop.html?category=festival" style="display: flex; align-items: center; gap: 10px; padding: 10px 18px; color: #333; text-decoration: none; font-size: 0.84rem; font-weight: 600;" onmouseover="this.style.background='#fdf8f3';this.style.color='#7a001e'" onmouseout="this.style.background='none';this.style.color='#333'">
+                <span>✨</span> Festival Collection
+              </a>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div style="flex: 1; position: relative;">
+            <input type="text" id="global-search-input" placeholder="Search Dresses, Pagdi, Jewellery..." style="width: 100%; padding: 10px 42px 10px 18px; border: 1.5px solid #dcdcdc; border-radius: 20px; font-size: 0.85rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#7a001e'" onblur="this.style.borderColor='#dcdcdc'">
+            <button style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: #666;" onclick="window.location.href='/pages/shop.html'">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Account, Wishlist, Cart -->
+        <div class="header-right-actions" style="display: flex; align-items: center; gap: 24px;">
+          <a href="/pages/account/login.html" style="display: flex; flex-direction: column; align-items: center; gap: 2px; color: #333333; text-decoration: none; font-size: 0.72rem; font-weight: 600;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Login</span>
+          </a>
+          <a href="/pages/wishlist.html" style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; color: #333333; text-decoration: none; font-size: 0.72rem; font-weight: 600;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span class="badge-red-circle" id="wishlist-badge-count" style="position: absolute; top: -4px; right: 0; background: #7a001e; color: #ffffff; font-size: 0.6rem; font-weight: 800; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">0</span>
+            <span>Wishlist</span>
+          </a>
+          <a href="/pages/cart.html" style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; color: #333333; text-decoration: none; font-size: 0.72rem; font-weight: 600;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span class="badge-red-circle" id="cart-badge-count" style="position: absolute; top: -4px; right: -2px; background: #7a001e; color: #ffffff; font-size: 0.6rem; font-weight: 800; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">0</span>
+            <span>Cart</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Tier 2: Deep Maroon Navigation Bar -->
+  <div style="background: #7a001e; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="container">
+      <nav class="header-center-nav" style="display: flex; align-items: center; justify-content: center; gap: 20px; height: 42px; overflow-x: auto; white-space: nowrap;">
+        <a href="/index.html" class="nav-link active" id="nav-home" style="color: #ffffff; font-weight: 700; font-size: 0.84rem; text-decoration: none; padding: 4px 10px; background: rgba(255,255,255,0.15); border-radius: 4px;">Home</a>
+        <a href="/pages/about.html" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">About Us</a>
+        <a href="/pages/collections.html" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">All Collections</a>
+        <a href="/pages/shop.html?category=poshak" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">Poshak</a>
+        <a href="/pages/shop.html?category=pagdi" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">Pagdi & Mukut</a>
+        <a href="/pages/shop.html?category=jewellery" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">Jewellery</a>
+        <a href="/pages/shop.html?category=accessories" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">Accessories</a>
+        <a href="/pages/shop.html?category=jhula" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">Jhula & Singhasan</a>
+        <a href="/pages/shop.html?sort=new" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">New Arrivals</a>
+        <a href="/pages/shop.html?sort=offers" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">Offers</a>
+        <a href="/pages/contact.html" class="nav-link" style="color: #ffffff; font-weight: 500; font-size: 0.84rem; text-decoration: none;">Contact Us</a>
+      </nav>
+    </div>
+  </div>
+</header>

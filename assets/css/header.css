@@ -1,0 +1,107 @@
+/* 2-Tier Header Styles */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 8000;
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+}
+
+/* Left Side Logo */
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-brand img {
+  height: 46px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #7a001e !important;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.logo-tagline {
+  font-size: 0.7rem;
+  color: #555555 !important;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+
+/* Navigation Bar */
+.header-center-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.header-center-nav a {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 4px 10px;
+  transition: all 0.2s ease;
+}
+
+.header-center-nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+/* Right Actions */
+.header-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-icon-btn {
+  position: relative;
+  font-size: 1.25rem;
+  color: #ffffff !important;
+  padding: 4px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header-icon-btn:hover {
+  color: #e76f51 !important;
+}
+
+.badge-red-circle {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #d32f2f !important;
+  color: #ffffff !important;
+  font-size: 0.65rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #000000;
+}

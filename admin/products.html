@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Products | Admin Portal</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <style>
+    .admin-layout { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+    .admin-sidebar { background: var(--primary-dark); color: #fff; padding: 24px; border-right: 2px solid var(--gold-primary); }
+    .admin-sidebar a { display: flex; align-items: center; gap: 12px; padding: 12px; color: #9ca3af; border-radius: var(--radius-sm); margin-bottom: 4px; font-weight: 600; }
+    .admin-sidebar a:hover, .admin-sidebar a.active { background: var(--gold-gradient); color: var(--primary-dark); }
+    .admin-main { background: #f4f6f9; padding: 32px; }
+  </style>
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div style="margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <img src="/assets/images/logo.png" alt="Kanha Vastra Logo" style="height: 42px; width: 100%; background: #ffffff; padding: 4px 8px; border-radius: 6px; object-fit: contain;">
+      </div>
+      <nav>
+        <a href="/admin/index.html">📊 Dashboard</a>
+        <a href="/admin/products.html" class="active">📦 Products</a>
+        <a href="/admin/add-product.html">➕ Add Product</a>
+        <a href="/admin/orders.html">🛒 Orders</a>
+        <a href="/admin/customers.html">👥 Customers</a>
+        <a href="/admin/inventory.html">📉 Inventory Stock</a>
+        <a href="/admin/coupons.html">🏷️ Coupons</a>
+        <a href="/admin/reviews.html">⭐ Reviews</a>
+        <a href="/index.html" style="margin-top: 40px; color: var(--crimson-accent);">🌐 Back to Storefront</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px;">
+        <h1 class="font-heading" style="color: var(--primary-main);">Product Inventory Management</h1>
+        <a href="/admin/add-product.html" class="btn btn-gold">+ Add New Product</a>
+      </div>
+
+      <div style="background: #fff; border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;" id="admin-products-table">
+          <thead>
+            <tr style="text-align: left; border-bottom: 2px solid var(--border-light); color: var(--primary-main);">
+              <th style="padding: 10px;">ID</th>
+              <th style="padding: 10px;">Product Name</th>
+              <th style="padding: 10px;">Category</th>
+              <th style="padding: 10px;">Price</th>
+              <th style="padding: 10px;">Stock</th>
+              <th style="padding: 10px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="admin-products-body">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/data/products.json').then(r => r.json()).then(products => {
+        const body = document.getElementById('admin-products-body');
+        body.innerHTML = products.map(p => `
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <td style="padding: 12px; font-weight: 700;">${p.id}</td>
+            <td style="padding: 12px; font-weight: 600;">${p.name}</td>
+            <td style="padding: 12px; color: var(--text-muted);">${p.categoryName}</td>
+            <td style="padding: 12px; font-weight: 700;">₹${p.price}</td>
+            <td style="padding: 12px;"><span class="badge ${p.stockQty > 25 ? 'badge-green' : 'badge-crimson'}">${p.stockQty} in stock</span></td>
+            <td style="padding: 12px;">
+              <button class="btn btn-outline btn-sm" onclick="alert('Editing ${p.name}')">Edit</button>
+            </td>
+          </tr>
+        `).join('');
+      });
+    });
+  </script>
+</body>
+</html>
